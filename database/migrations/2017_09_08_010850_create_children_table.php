@@ -14,7 +14,7 @@ class CreateChildrenTable extends Migration
     public function up()
     {
         Schema::create('children', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
             $table->timestamps();
             $table->string('first_name');
             $table->string('last_name');
@@ -22,7 +22,8 @@ class CreateChildrenTable extends Migration
             $table->string('birth_city');
             $table->string('birth_state');
             $table->string('birth_zip');
-
+            $table->uuid('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
