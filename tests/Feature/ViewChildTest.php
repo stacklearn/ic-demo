@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class SupporterLoginTest extends TestCase
+class ViewChildTest extends TestCase
 {
     use DatabaseMigrations;
 
