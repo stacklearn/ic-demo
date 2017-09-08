@@ -12,6 +12,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
       DB::table('users')->insert([
+        'id' => uniqid(),
         'name' => 'Wesley Meier',
         'email' => 'wesley.meier@informationcurators.com',
         'password' => bcrypt('secret'),
