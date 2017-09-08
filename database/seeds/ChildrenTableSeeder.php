@@ -15,7 +15,7 @@ class ChildrenTableSeeder extends Seeder
       DB::table('children')->insert([
         'first_name' => 'Young',
         'last_name' => 'Tyke',
-        'birth_date' => Carbon::parse('2000-12-01'),
+        'birth_date' => Carbon::parse('2012-12-01'),
         'birth_city' => 'Ann Arbor',
         'birth_state' => 'MI',
         'birth_zip' => '48103',
@@ -23,7 +23,7 @@ class ChildrenTableSeeder extends Seeder
       DB::table('children')->insert([
         'first_name' => 'Smarty Pants',
         'last_name' => 'Teenager',
-        'birth_date' => Carbon::parse('1995-4-18'),
+        'birth_date' => Carbon::parse('2000-4-18'),
         'birth_city' => 'Flint',
         'birth_state' => 'MI',
         'birth_zip' => '48501',
