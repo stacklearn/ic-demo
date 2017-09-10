@@ -15,6 +15,7 @@ class CreateChildrenTable extends Migration
     {
         Schema::create('children', function (Blueprint $table) {
             $table->uuid('id');
+            $table->primary('id');
             $table->timestamps();
             $table->string('first_name');
             $table->string('last_name');
@@ -22,8 +23,8 @@ class CreateChildrenTable extends Migration
             $table->string('birth_city');
             $table->string('birth_state');
             $table->string('birth_zip');
-            $table->uuid('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->uuid('parent_id')->unsigned();
+            $table->foreign('parent_id')->references('id')->on('users');
         });
     }
 

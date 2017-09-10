@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Faker\Generator as Faker;
 use Carbon\Carbon;
 
@@ -22,5 +23,6 @@ $factory->define(App\Child::class, function (Faker $faker) {
       'birth_city' => 'Fakeville',
       'birth_state' => 'MI',
       'birth_zip' => '90210',
+      'parent_id' => User::first()
   ];
 });
