@@ -19,6 +19,8 @@ class ViewDashboardTest extends TestCase
     /** @test  */
     public function view_a_child()
     {
+      // Create user
+      $user = factory(User::class)->create();
       // Arrange
       // Create children
       $young_tyke = factory(Child::class)->create([
@@ -28,6 +30,7 @@ class ViewDashboardTest extends TestCase
         'birth_city' => 'Ann Arbor',
         'birth_state' => 'MI',
         'birth_zip' => '48103',
+        'parent_id' => $user
       ]);
       $smarty_pants_teenager = factory(Child::class)->create([
         'first_name' => 'Smarty Pants',
@@ -36,14 +39,14 @@ class ViewDashboardTest extends TestCase
         'birth_city' => 'Flint',
         'birth_state' => 'MI',
         'birth_zip' => '48501',
+        'parent_id' => $user
       ]);
-      // Create user
-      $user = factory(User::class)->create();
+
       // Log in
       Auth::login($user);
-      //Act
-      $response = $this->get('/home');
 
+      //Act
+      $response = $this->get('/');
 
       $response->assertSee('Young Tyke');
       $response->assertSee('Age 4');

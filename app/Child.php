@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Child extends Model
 {
+
+    use Uuids;
+    
     protected $guarded = [];
     protected $dates = ['birth_date'];
 

@@ -22,7 +22,7 @@ class ChildrenTableSeeder extends Seeder
         'birth_city' => 'Ann Arbor',
         'birth_state' => 'MI',
         'birth_zip' => '48103',
-        'user_id' => $user->id,
+        'parent_id' => $user->id,
       ]);
       DB::table('children')->insert([
         'id' => uniqid(),
@@ -32,7 +32,7 @@ class ChildrenTableSeeder extends Seeder
         'birth_city' => 'Flint',
         'birth_state' => 'MI',
         'birth_zip' => '48501',
-        'user_id' => $user->id,
+        'parent_id' => $user->id,
       ]);
 
     }
