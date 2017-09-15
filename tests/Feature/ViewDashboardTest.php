@@ -17,7 +17,7 @@ class ViewDashboardTest extends TestCase
     use DatabaseMigrations;
 
     /** @test  */
-    public function view_a_child()
+    public function view_children()
     {
       // Create user
       $user = factory(User::class)->create();
