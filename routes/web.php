@@ -18,3 +18,5 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/calendar', 'CalendarController@index');
+
+Route::post('/children/{id}/payments', 'ChildPaymentsController@store');
